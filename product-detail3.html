@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AVIA — Product Detail</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles3.css" />
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="announcement-track">
+      <span class="announcement-content">🌿 FREE SHIPPING on orders above RM150 &nbsp;&nbsp;&nbsp;✨ NEW: Glow Guard Daily UV Defense &nbsp;&nbsp;&nbsp;🔥 APRIL SALE: 40% off with min. spend RM500 &nbsp;&nbsp;&nbsp;</span><span class="announcement-content" aria-hidden="true">🌿 FREE SHIPPING on orders above RM150 &nbsp;&nbsp;&nbsp;✨ NEW: Glow Guard Daily UV Defense &nbsp;&nbsp;&nbsp;🔥 APRIL SALE: 40% off with min. spend RM500 &nbsp;&nbsp;&nbsp;</span><span class="announcement-content" aria-hidden="true">🌿 FREE SHIPPING on orders above RM150 &nbsp;&nbsp;&nbsp;✨ NEW: Glow Guard Daily UV Defense &nbsp;&nbsp;&nbsp;🔥 APRIL SALE: 40% off with min. spend RM500 &nbsp;&nbsp;&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <div class="header-left">
+        <nav class="main-nav">
+          <a href="index3.html" class="nav-item">Home</a>
+          <a href="products3.html" class="nav-item">Shop All</a>
+        </nav>
+      </div>
+      <a href="index3.html" class="logo">avia<span>health</span></a>
+      <div class="header-right">
+        <a href="#" class="nav-icon" aria-label="Search">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </a>
+        <a href="#" class="nav-icon" aria-label="Account">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </a>
+        <a href="#" class="cart-btn" aria-label="Cart">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count">0</span>
+        </a>
+        <button class="burger" id="burger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-inner">
+      <div class="mobile-section">
+        <a href="index3.html">Home</a>
+        <a href="products3.html">Shop All</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+      <div class="container">
+        <a href="index3.html">Home</a>
+        <span>›</span>
+        <a href="products3.html">Shop All</a>
+        <span>›</span>
+        <span id="breadcrumbName">Product</span>
+      </div>
+    </div>
+
+    <!-- Product Detail -->
+    <section class="detail-section">
+      <div class="container">
+        <div class="detail-grid">
+
+          <!-- Left: Image -->
+          <div class="detail-image-col">
+            <div class="detail-image-wrap">
+              <div class="detail-image-main" id="detailImageMain">
+                <span id="detailEmoji" class="detail-emoji"></span>
+                <img id="detailImg" src="" alt="" style="display:none;" />
+              </div>
+              <span class="detail-badge" id="detailBadge" style="display:none;"></span>
+            </div>
+          </div>
+
+          <!-- Right: Info -->
+          <div class="detail-info-col">
+            <p class="detail-cat" id="detailCat"></p>
+            <h1 class="detail-name" id="detailName"></h1>
+            <div class="detail-rating">
+              <span class="detail-stars">★★★★★</span>
+              <span class="detail-review-count">128 reviews</span>
+            </div>
+            <p class="detail-price" id="detailPrice"></p>
+            <p class="detail-desc" id="detailDesc"></p>
+
+            <div class="detail-benefits" id="detailBenefits"></div>
+
+            <div class="detail-meta" id="detailMeta"></div>
+
+            <!-- Quantity + Add to Cart -->
+            <div class="detail-purchase">
+              <div class="detail-qty">
+                <button class="qty-btn" id="detailQtyMinus">−</button>
+                <span class="qty-num" id="detailQtyNum">1</span>
+                <button class="qty-btn" id="detailQtyPlus">+</button>
+              </div>
+              <button class="btn btn-primary detail-add-btn" id="detailAddBtn">
+                Add to Cart →
+              </button>
+            </div>
+
+            <div class="detail-trust">
+              <div class="detail-trust-item">🚚 Free shipping over RM150</div>
+              <div class="detail-trust-item">✅ KKM Certified</div>
+              <div class="detail-trust-item">🔄 30-day return policy</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index3.html" class="logo footer-logo">avia<span>health</span></a>
+          <p class="footer-tagline">Pure, KKM certified products — created with care, inspired by a mother's devotion.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Shop</h4>
+            <a href="products3.html">Shop All</a>
+          </div>
+          <div class="footer-col">
+            <h4>Learn</h4>
+            <a href="#">Our Story</a>
+            <a href="#">FAQs</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Avia Health Sdn. Bhd.</p>
+        <div class="payment-icons">
+          <span class="payment-badge">Visa</span>
+          <span class="payment-badge">Mastercard</span>
+          <span class="payment-badge">FPX</span>
+          <span class="payment-badge">TNG</span>
+          <span class="payment-badge">GrabPay</span>
+          <span class="payment-badge">Boost</span>
+          <span class="payment-badge">ShopeePay</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3 class="cart-title">Your Cart</h3>
+      <button class="cart-close" id="cartClose" aria-label="Close cart">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="cart-body" id="cartBody">
+      <div class="cart-empty" id="cartEmpty">
+        <span class="cart-empty-icon">🛍️</span>
+        <p>Your cart is empty</p>
+        <span>Add something wonderful!</span>
+      </div>
+      <div class="cart-items" id="cartItems"></div>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none;">
+      <div class="cart-summary">
+        <div class="cart-summary-row">
+          <span>Subtotal</span>
+          <span id="cartSubtotal">RM 0</span>
+        </div>
+        <div class="cart-summary-row">
+          <span>Shipping</span>
+          <span id="cartShipping">FREE</span>
+        </div>
+        <div class="cart-summary-divider"></div>
+        <div class="cart-summary-row total">
+          <span>Total</span>
+          <span id="cartTotal">RM 0</span>
+        </div>
+      </div>
+      <div class="cart-actions">
+        <button class="btn btn-ghost cart-continue" id="cartContinue">← Continue Shopping</button>
+        <a href="#" class="btn btn-primary cart-checkout">Checkout →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Overlay -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-container">
+      <div class="search-bar-wrap">
+        <svg class="search-icon-input" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" id="searchInput" class="search-input" placeholder="Search products..." autocomplete="off" />
+        <button class="search-clear" id="searchClear" aria-label="Clear search">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+    <div class="search-backdrop" id="searchBackdrop"></div>
+  </div>
+
+  <script>
+    // ── Product Data ──
+    const products = {
+      'coconut-oil': {
+        name: 'Organic Coconut Oil (Odourless)',
+        cat: 'Daily Oil',
+        price: '35',
+        emoji: '🥥',
+        img: 'image/Coconut Oil.png',
+        badge: 'NEW',
+        bg: 'linear-gradient(135deg, #d4edda, #a8d5b5)',
+        desc: `AVIA Organic Coconut Oil is cold-pressed from fresh coconuts, preserving every drop of natural goodness. Rich in medium-chain fatty acids (MCFAs), it supports immune function, promotes healthy digestion, and deeply nourishes skin and hair from within. Unlike refined oils, ours retains its natural antioxidants and lauric acid content — nature's most powerful antimicrobial compound.`,
+        benefits: ['Body & Facial massage Oil', 'Skin & Hair moisturiser or Treatment', 'Relieves Joint & Muscle pain', 'Promotes Hair Growth', 'Anti Stretch Mark', 'Helps Sensitive Skin (Itchy / Eczema)', 'Antibacterial - Good for Cuts & Wonds', 'Perfect Natural Make-up Remover'],
+        meta: { 'Volume': '120ml', 'Origin': 'Malaysia', 'Certification': 'KKM Certified', 'Shelf Life': '24 months' }
+      },
+      'virgin-oil': {
+        name: 'Virgin Coconut Oil',
+        cat: 'Super Product',
+        price: '45',
+        emoji: '🌸',
+        img: 'image/Virgin Coconut Oil.png',
+        badge: 'Bestseller',
+        bg: 'linear-gradient(135deg, #fce4d6, #f7b89a)',
+        desc: `AVIA Virgin Coconut Oil is an organic product celebrated as “The Super Food”. Rich in Lauric Acid—the same beneficial compound found in mother’s milk—it offers numerous health benefits that support and heal the human body. This natural oil is antibacterial, antiviral, and antifungal, making it a powerful aid for overall wellness. It acts as a brain booster, provides energy, strengthens the immune system, and improves digestion.`,
+        benefits: ['100% Natural', 'Rich in Lauric Acid', 'Antibacterial, antiviral, and antifungal', 'Strengthens the immune system', 'Can be consumed orally or applied externally'],
+        meta: { 'Volume': '250ml', 'Origin': 'Malaysia', 'Certification': 'KKM Certified', 'Shelf Life': '24 months' }
+      },
+      'baby-care': {
+        name: 'Baby Organic Coconut Oil (Odourless)',
+        cat: 'Baby Safe',
+        price: '35',
+        emoji: '⚡',
+        img: 'image/Baby Care Coconut Oil.png',
+        badge: '',
+        bg: 'linear-gradient(135deg, #e8d5f5, #c9a0dc)',
+        desc: `meta/boost is a science-backed metabolic support supplement that helps regulate blood sugar levels and enhance fat metabolism naturally. Featuring berberine, chromium, and green tea extract, it works within 60 minutes to reduce post-meal glucose spikes, supporting sustained energy and healthy weight management.`,
+        benefits: ['Regulates blood sugar', 'Enhances fat metabolism', 'Reduces energy crashes', 'Works within 60 minutes', 'No stimulants'],
+        meta: { 'Form': 'Capsule', 'Servings': '60 per pack', 'Take': 'Before meals', 'Certification': 'KKM Certified' }
+      },
+      'coconut-softgel': {
+        name: 'Virgin Coconut Oil Softgel',
+        cat: 'Supplement',
+        price: '49.90',
+        emoji: '💧',
+        img: 'image/Coconut Softgel.png',
+        badge: '',
+        bg: 'linear-gradient(135deg, #d6eefc, #90caf9)',
+        desc: `Hydr-Aid delivers deep cellular hydration using a clinically proven blend of electrolytes, hyaluronic acid, and coconut water powder. Unlike regular water, Hydr-Aid replenishes minerals lost through sweat and daily stress, plumping skin from within and boosting physical and mental performance throughout the day.`,
+        benefits: ['Deep cellular hydration', 'Plumps skin from within', 'Replenishes electrolytes', 'Improves mental clarity', 'Natural coconut water base'],
+        meta: { 'Form': 'Powder', 'Servings': '30 per pack', 'Flavour': 'Lychee', 'Certification': 'KKM Certified' }
+      },
+      'flower-coconut': {
+        name: 'La Flor (The Flower) Organic Coconut Oil',
+        cat: 'Infused',
+        price: '59.90',
+        
+        img: 'image/Flower Coconut Oil.png',
+        images: ['image/Flower Coconut Oil.png', 'image/Benefits La Flor.png'],
+        badge: '',
+        bg: 'linear-gradient(135deg, #fff3cd, #ffd966)',
+        desc: `de/bloat is a fast-acting digestive enzyme and probiotic blend that targets bloating, gas, and indigestion at the source. Formulated with 8 digestive enzymes and 5 billion CFU probiotics, it works within 60 minutes to flatten bloating and restore gut comfort — without any harsh laxatives or artificial ingredients.`,
+        benefits: ['Relieves bloating fast', 'Reduces gas & discomfort', '8 digestive enzymes', '5 billion CFU probiotics', 'No harsh laxatives'],
+        meta: { 'Form': 'Capsule', 'Servings': '30 per pack', 'Take': 'With meals', 'Certification': 'KKM Certified' }
+      },
+      'glow-guard': {
+        name: 'Glow Guard',
+        cat: 'Skin Defense',
+        price: 89,
+        emoji: '🍓',
+        img: '',
+        badge: 'NEW',
+        bg: 'linear-gradient(135deg, #fde8ef, #f48fb1)',
+        desc: `Glow Guard is our ingestible UV defense supplement, formulated to protect skin against UV-related oxidative stress from the inside out. Packed with polypodium leucotomos extract, astaxanthin, and vitamin C, it reduces UV-induced skin damage, brightens complexion, and builds long-term skin resilience — your daily internal sunscreen.`,
+        benefits: ['UV oxidative stress defense', 'Brightens complexion', 'Builds skin resilience', 'Rich in astaxanthin', 'Works from within'],
+        meta: { 'Form': 'Capsule', 'Servings': '30 per pack', 'Take': 'Morning', 'Certification': 'KKM Certified' }
+      }
+    };
+
+    // ── Load product from URL ──
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id') || 'coconut-oil';
+    const p = products[id] || products['coconut-oil'];
+
+    // Set page title
+    document.title = `AVIA — ${p.name}`;
+    document.getElementById('breadcrumbName').textContent = p.name;
+    document.getElementById('detailCat').textContent = p.cat;
+    document.getElementById('detailName').textContent = p.name;
+    document.getElementById('detailPrice').textContent = `RM ${p.price}`;
+    document.getElementById('detailDesc').textContent = p.desc;
+
+    // Image or emoji
+    const imgEl = document.getElementById('detailImg');
+    const emojiEl = document.getElementById('detailEmoji');
+    const mainWrap = document.getElementById('detailImageMain');
+    mainWrap.style.background = p.bg;
+
+    if (p.img) {
+  imgEl.src = p.img;
+  imgEl.alt = p.name;
+  imgEl.style.display = 'block';
+  emojiEl.style.display = 'none';
+
+  // If multiple images, add thumbnail strip
+  if (p.images && p.images.length > 1) {
+    const strip = document.createElement('div');
+    strip.className = 'detail-thumb-strip';
+    p.images.forEach((src, i) => {
+      const thumb = document.createElement('button');
+      thumb.className = 'detail-thumb' + (i === 0 ? ' active' : '');
+      thumb.innerHTML = `<img src="${src}" alt="View ${i + 1}" />`;
+      thumb.addEventListener('click', () => {
+        imgEl.src = src;
+        document.querySelectorAll('.detail-thumb').forEach(t => t.classList.remove('active'));
+        thumb.classList.add('active');
+      });
+      strip.appendChild(thumb);
+    });
+    document.getElementById('detailImageMain').insertAdjacentElement('afterend', strip);
+  }
+} else {
+  emojiEl.textContent = p.emoji;
+  emojiEl.style.display = 'flex';
+}
+
+    // Badge
+    if (p.badge) {
+      const badge = document.getElementById('detailBadge');
+      badge.textContent = p.badge;
+      badge.style.display = 'inline-block';
+      badge.className = `detail-badge ${p.badge === 'Bestseller' ? 'bestseller' : 'new'}`;
+    }
+
+    // Benefits
+    document.getElementById('detailBenefits').innerHTML = `
+      <h4 class="detail-section-label">Key Benefits</h4>
+      <ul class="detail-benefits-list">
+        ${p.benefits.map(b => `<li> ${b}</li>`).join('')}
+      </ul>
+    `;
+
+    // Meta
+    document.getElementById('detailMeta').innerHTML = `
+      <h4 class="detail-section-label">Product Details</h4>
+      <div class="detail-meta-grid">
+        ${Object.entries(p.meta).map(([k, v]) => `
+          <div class="detail-meta-item">
+            <span class="detail-meta-key">${k}</span>
+            <span class="detail-meta-val">${v}</span>
+          </div>
+        `).join('')}
+      </div>
+    `;
+
+    // ── Quantity control ──
+    let qty = 1;
+    document.getElementById('detailQtyMinus').addEventListener('click', () => {
+      if (qty > 1) { qty--; document.getElementById('detailQtyNum').textContent = qty; }
+    });
+    document.getElementById('detailQtyPlus').addEventListener('click', () => {
+      qty++; document.getElementById('detailQtyNum').textContent = qty;
+    });
+
+    // ── Sticky header ──
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // ── Burger ──
+    const burger = document.getElementById('burger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+
+    // ── CART ──
+    let cart = JSON.parse(localStorage.getItem('aviaCart') || '[]');
+    const cartSidebar  = document.getElementById('cartSidebar');
+    const cartOverlay  = document.getElementById('cartOverlay');
+    const cartClose    = document.getElementById('cartClose');
+    const cartContinue = document.getElementById('cartContinue');
+    const cartEmpty    = document.getElementById('cartEmpty');
+    const cartItemsEl  = document.getElementById('cartItems');
+    const cartFooter   = document.getElementById('cartFooter');
+    const cartCountEl  = document.querySelector('.cart-count');
+
+    function openCart() { cartSidebar.classList.add('open'); cartOverlay.classList.add('open'); document.body.style.overflow = 'hidden'; }
+    function closeCart() { cartSidebar.classList.remove('open'); cartOverlay.classList.remove('open'); document.body.style.overflow = ''; }
+
+    cartClose.addEventListener('click', closeCart);
+    cartOverlay.addEventListener('click', closeCart);
+    cartContinue.addEventListener('click', closeCart);
+    document.querySelector('.cart-btn').addEventListener('click', (e) => { e.preventDefault(); openCart(); });
+
+    function saveCart() { localStorage.setItem('aviaCart', JSON.stringify(cart)); }
+
+    function renderCart() {
+      const isEmpty = cart.length === 0;
+      cartEmpty.style.display = isEmpty ? 'flex' : 'none';
+      cartItemsEl.style.display = isEmpty ? 'none' : 'block';
+      cartFooter.style.display = isEmpty ? 'none' : 'block';
+      if (!isEmpty) {
+        cartItemsEl.innerHTML = cart.map((item, i) => `
+          <div class="cart-item">
+            <div class="cart-item-img" style="background:${item.bg}"><span>${item.emoji}</span></div>
+            <div class="cart-item-info">
+              <p class="cart-item-name">${item.name}</p>
+              <p class="cart-item-cat">${item.cat}</p>
+              <div class="cart-item-controls">
+                <button class="qty-btn" onclick="changeQty(${i}, -1)">−</button>
+                <span class="qty-num">${item.qty}</span>
+                <button class="qty-btn" onclick="changeQty(${i}, 1)">+</button>
+                <button class="remove-btn" onclick="removeItem(${i})">Remove</button>
+              </div>
+            </div>
+            <p class="cart-item-price">RM ${item.price * item.qty}</p>
+          </div>
+        `).join('');
+        const subtotal = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+        const shipping = subtotal >= 150 ? 'FREE' : 'RM 10';
+        const total = subtotal >= 150 ? subtotal : subtotal + 10;
+        document.getElementById('cartSubtotal').textContent = `RM ${subtotal}`;
+        document.getElementById('cartShipping').textContent = shipping;
+        document.getElementById('cartTotal').textContent = `RM ${total}`;
+      }
+      cartCountEl.textContent = cart.reduce((sum, item) => sum + item.qty, 0);
+      saveCart();
+    }
+
+    function changeQty(index, delta) { cart[index].qty += delta; if (cart[index].qty <= 0) cart.splice(index, 1); renderCart(); }
+    function removeItem(index) { cart.splice(index, 1); renderCart(); }
+
+    function addToCart(name, cat, price, emoji, bg, quantity) {
+      const existing = cart.find(item => item.name === name);
+      if (existing) { existing.qty += quantity; }
+      else { cart.push({ name, cat, price, emoji, bg, qty: quantity }); }
+      renderCart();
+      openCart();
+    }
+
+    document.getElementById('detailAddBtn').addEventListener('click', () => {
+      const btn = document.getElementById('detailAddBtn');
+      addToCart(p.name, p.cat, p.price, p.emoji, p.bg, qty);
+      btn.textContent = '✓ Added to Cart!';
+      setTimeout(() => { btn.textContent = 'Add to Cart →'; }, 1500);
+    });
+
+    // ── Search ──
+    const allProducts = Object.values(products);
+    const searchOverlay  = document.getElementById('searchOverlay');
+    const searchBackdrop = document.getElementById('searchBackdrop');
+    const searchInput    = document.getElementById('searchInput');
+    const searchClear    = document.getElementById('searchClear');
+    const searchResults  = document.getElementById('searchResults');
+
+    function openSearch() { searchOverlay.classList.add('open'); document.body.style.overflow = 'hidden'; setTimeout(() => searchInput.focus(), 100); }
+    function closeSearch() { searchOverlay.classList.remove('open'); document.body.style.overflow = ''; searchInput.value = ''; searchResults.innerHTML = ''; }
+
+    document.querySelector('.nav-icon[aria-label="Search"]').addEventListener('click', (e) => { e.preventDefault(); openSearch(); });
+    searchBackdrop.addEventListener('click', closeSearch);
+    searchClear.addEventListener('click', closeSearch);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeSearch(); });
+
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.trim().toLowerCase();
+      if (!query) { searchResults.innerHTML = `<p class="search-hint">Try searching "coconut", "skin", "hydration"...</p>`; return; }
+      const matches = allProducts.filter(p => p.name.toLowerCase().includes(query) || p.cat.toLowerCase().includes(query));
+      if (matches.length === 0) {
+        searchResults.innerHTML = `<div class="search-empty"><p class="search-empty-icon">🔍</p><p>No products found for "<strong>${query}</strong>"</p><a href="products3.html" class="search-view-all">Browse all products →</a></div>`;
+        return;
+      }
+      searchResults.innerHTML = `
+        <p class="search-results-label">${matches.length} product${matches.length > 1 ? 's' : ''} found</p>
+        <div class="search-results-grid">
+          ${matches.map(pr => `
+            <div class="search-result-card" onclick="window.location='product-detail.html?id=${Object.keys(products).find(k => products[k].name === pr.name)}'">
+              <div class="search-result-img" style="background:${pr.bg}"><span>${pr.emoji}</span>${pr.badge ? `<span class="search-result-badge">${pr.badge}</span>` : ''}</div>
+              <div class="search-result-info">
+                <p class="search-result-cat">${pr.cat}</p>
+                <p class="search-result-name">${pr.name}</p>
+                <p class="search-result-price">RM ${pr.price}</p>
+              </div>
+              <button class="search-add-btn">View →</button>
+            </div>
+          `).join('')}
+        </div>
+        <a href="products3.html" class="search-view-all">View all products →</a>
+      `;
+    });
+
+    renderCart();
+  </script>
+
+</body>
+</html>
