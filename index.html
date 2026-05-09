@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AVIA — Supplements Made for You</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="announcement-track"><span>🌿 FREE SHIPPING on orders above RM150 &nbsp;&nbsp;&nbsp;✨ NEW: Avia Organic
+        Coconut Oil &nbsp;&nbsp;&nbsp;🔥 BESTSELLER: Virgin Organic Coconut Oil
+        &nbsp;&nbsp;&nbsp;</span><span>🌿 FREE SHIPPING on orders above RM150 &nbsp;&nbsp;&nbsp;✨ NEW: Avia Organic
+        Coconut Oil &nbsp;&nbsp;&nbsp;🔥 BESTSELLER: Virgin Organic Coconut Oil
+        &nbsp;&nbsp;&nbsp;</span><span>🌿 FREE SHIPPING on orders above RM150 &nbsp;&nbsp;&nbsp;✨ NEW: Avia Organic
+        Coconut Oil &nbsp;&nbsp;&nbsp;🔥 BESTSELLER: Virgin Organic Coconut Oil &nbsp;&nbsp;&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- Header / Nav -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <div class="header-left">
+        <nav class="main-nav">
+          <a href="index.html" class="nav-item active-nav">Home</a>
+          <a href="products.html" class="nav-item">Shop All</a>
+        </nav>
+      </div>
+
+      <a href="index.html" class="logo">avia<span>health</span></a>
+
+      <div class="header-right">
+        <a href="#" class="nav-icon" aria-label="Search">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8" />
+            <path d="m21 21-4.35-4.35" />
+          </svg>
+        </a>
+        <a href="#" class="cart-btn" aria-label="Cart">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <path d="M16 10a4 4 0 0 1-8 0" />
+          </svg>
+          <span class="cart-count">0</span>
+        </a>
+        <button class="burger" id="burger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-inner">
+      <div class="mobile-section">
+        <a href="products.html">Shop All</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- Hero Slider -->
+    <section class="hero-section">
+      <div class="hero-slides">
+
+        <!-- Slide 1 -->
+        <div class="hero-slide active" id="slide1">
+          <div class="hero-bg slide1-bg"></div>
+          <div class="hero-content">
+            <div class="hero-text">
+              <h1 class="hero-title">Introducing<br><em>Avia Malaysia</em></h1>
+              <p class="hero-desc">Avia offers KKM‑certified organic coconut oil products made for everyone — from babies to adults. Each item is crafted with pure, natural coconut oil to deliver gentle, nourishing care inspired by nature.</p>
+              <div class="hero-cta-group">
+                <a href="products.html" class="btn btn-primary">All Products</a>
+              </div>
+            </div>
+            <div class="hero-visual">
+              <div class="product-card-hero sale">
+                <img src="image/1_Avia Products.png" alt="Avia’s Coconut Oils" class="hero-product-img" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="hero-slide" id="slide2">
+          <div class="hero-bg slide2-bg"></div>
+          <div class="hero-content">
+            <div class="hero-text">
+              <span class="hero-eyebrow">NEW ✨</span>
+              <h1 class="hero-title">Organic Coconut Oil<br><em>Daily Nourishing</em></h1>
+              <p class="hero-desc">“Your natural skin armor — protect, nourish, and radiate from within."</p>
+              <div class="hero-cta-group">
+                <a href="product-detail.html?id=coconut-oil" class="btn btn-primary">Shop Now</a>
+              </div>
+            </div>
+            <div class="hero-visual">
+              <div class="product-card-hero glow">
+                <img src="image/1_Coconut Oil.png" alt="Organic Coconut Oil" class="hero-product-img" />
+                <div class="product-glow-ring"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide indicators -->
+      <div class="hero-dots">
+        <button class="dot active" data-slide="0" aria-label="Go to slide 1"></button>
+        <button class="dot" data-slide="1" aria-label="Go to slide 2"></button>
+      </div>
+      <button class="hero-arrow prev" id="prevSlide" aria-label="Previous slide">&#8592;</button>
+      <button class="hero-arrow next" id="nextSlide" aria-label="Next slide">&#8594;</button>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="trust-bar">
+      <div class="trust-items">
+        <div class="trust-item">
+          <span class="trust-icon">🧬</span>
+          <span>KKM Certified</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <span class="trust-icon">🌿</span>
+          <span>100% Natural</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <span class="trust-icon">👩‍⚕️</span>
+          <span>Expert Formulated</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <span class="trust-icon">⭐</span>
+          <span>5-Star Reviews</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <span class="trust-icon">🚚</span>
+          <span>Free Shipping RM150+</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">Welcome to Avia</p>
+          <h2 class="section-title">Your Wellness,<br><em>Our Highest Standard</em></h2>
+          <p class="section-desc">Pure, KKM certified products — created with care, inspired by a mother’s devotion.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-section">
+      <div class="container">
+        <div class="products-grid">
+
+          <div class="product-card" data-aos>
+            <div class="product-card-coconut" style="background: linear-gradient(135deg, #d4edda, #a8d5b5);">
+              <img src="image/1_Coconut Oil.png" alt="Super Greens" />
+              <div class="product-badge new">NEW</div>
+            </div>
+            <div class="product-card-body">
+              <p class="product-card-cat">Daily Oil</p>
+              <h3 class="product-card-name"><a href="product-detail.html?id=coconut-oil">Organic Coconut Oil
+                  (Odourless)</a></h3>
+              <p class="product-card-tagline">Pure nourishment — hydrate, protect, and rejuvenate your skin with
+                nature’s organic touch</p>
+              <div class="product-card-footer">
+                <span class="product-card-price">RM 35</span>
+                <a href="#" class="btn-add">Add to Cart +</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-aos>
+            <div class="product-card-coconut" style="background: linear-gradient(135deg, #fce4d6, #f7b89a);">
+              <img src="image/1_Virgin Oil.png" alt="Super Greens" />
+              <div class="product-badge bestseller">Bestseller</div>
+            </div>
+            <div class="product-card-body">
+              <p class="product-card-cat">Super Product</p>
+              <h3 class="product-card-name"><a href="product-detail.html?id=virgin-oil">Virgin Coconut Oil</a></h3>
+              <p class="product-card-tagline">Our best-selling coconut oil product for overall well-being</p>
+              <div class="product-card-footer">
+                <span class="product-card-price">RM 45</span>
+                <a href="#" class="btn-add">Add to Cart +</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-aos>
+            <div class="product-card-coconut" style="background: linear-gradient(135deg, #d6eefc, #90caf9);">
+              <img src="image/1_Coconut Softgel.png" alt="Super Greens" />
+            </div>
+            <div class="product-card-body">
+              <p class="product-card-cat">Supplement</p>
+              <h3 class="product-card-name"><a href="product-detail.html?id=coconut-softgel">Virgin Coconut Oil
+                  Softgel</a></h3>
+              <p class="product-card-tagline">Power up naturally — brain boost, immune strength, and pure energy in
+                every softgel</p>
+              <div class="product-card-footer">
+                <span class="product-card-price">RM 49.90</span>
+                <a href="#" class="btn-add">Add to Cart +</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-aos>
+            <div class="product-card-coconut" style="background: linear-gradient(135deg, #e8d5f5, #c9a0dc);">
+              <img src="image/1_Baby Oil.png" alt="Super Greens" />
+            </div>
+            <div class="product-card-body">
+              <p class="product-card-cat">Baby Safe</p>
+              <h3 class="product-card-name"><a href="product-detail.html?id=baby-care">Baby Organic Coconut Oil
+                  (Odourless)</a></h3>
+              <p class="product-card-tagline">Gentle by nature — soothe, protect, and nourish your baby’s delicate skin
+                with pure organic care</p>
+              <div class="product-card-footer">
+                <span class="product-card-price">RM 35</span>
+                <a href="#" class="btn-add">Add to Cart +</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-aos>
+            <div class="product-card-coconut" style="background: linear-gradient(135deg, #fff3cd, #ffd966);">
+              <img src="image/1_Flower Oil.png" alt="Super Greens" />
+            </div>
+            <div class="product-card-body">
+              <p class="product-card-cat">Infused</p>
+              <h3 class="product-card-name"><a href="product-detail.html?id=flower-coconut">La Flor (The Flower)
+                  Organic Coconut Oil</a></h3>
+              <p class="product-card-tagline">Nature’s harmony — pure coconut oil enriched with delicate floral essence
+                to nourish body</p>
+              <div class="product-card-footer">
+                <span class="product-card-price">RM 59.90</span>
+                <a href="#" class="btn-add">Add to Cart +</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-aos>
+            <div class="product-card-coconut" style="background: linear-gradient(135deg, #fde8ef, #f48fb1);">
+              <img src="image/1_Peppermint Oil.png" alt="Super Greens" />
+            </div>
+            <div class="product-card-body">
+              <p class="product-card-cat">Refreshing</p>
+              <h3 class="product-card-name"><a href="product-detail.html?id=peppermint-coconut">Organic Virgin Coconut
+                  Oil with Peppermint</a></h3>
+              <p class="product-card-tagline">A soothing fusion of coconut and peppermint — hydrate, rejuvenate, and
+                awaken your senses</p>
+              <div class="product-card-footer">
+                <span class="product-card-price">RM 39.90</span>
+                <a href="#" class="btn-add">Add to Cart +</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust Standards -->
+    <section class="standards-section">
+      <div class="container">
+        <div class="standards-grid">
+          <div class="standard-card">
+            <div class="standard-icon">🔬</div>
+            <h3>KKM Certified</h3>
+            <p>Complies with KKM guidelines and backed by official KKM certification — ensuring your health is fully
+              protected.</p>
+          </div>
+          <div class="standard-card">
+            <div class="standard-icon">🌿</div>
+            <h3>100% Natural</h3>
+            <p>Clean, plant-based formulations. No artificial colours, fillers, or nasties. Just nature, optimised.</p>
+          </div>
+          <div class="standard-card">
+            <div class="standard-icon">🎁</div>
+            <h3>Get Rewarded</h3>
+            <p>Follow Avia’s page for exclusive updates, fresh product launches, and special promotions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Instagram Section -->
+    <section class="instagram-section">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">Community</p>
+          <h2 class="section-title">Join our <em>Community</em></h2>
+          <p class="section-desc">Follow us <a href="#" class="ig-handle">@a.v.i.a.m.y</a></p>
+        </div>
+        <div class="ig-grid">
+          <div class="ig-item" style="background: linear-gradient(135deg,#fce4d6,#f7b89a)"><span>🌸</span></div>
+          <div class="ig-item" style="background: linear-gradient(135deg,#d4edda,#a8d5b5)"><span>🥬</span></div>
+          <div class="ig-item" style="background: linear-gradient(135deg,#d6eefc,#90caf9)"><span>💧</span></div>
+          <div class="ig-item" style="background: linear-gradient(135deg,#fde8ef,#f48fb1)"><span>🍓</span></div>
+          <div class="ig-item" style="background: linear-gradient(135deg,#e8d5f5,#c9a0dc)"><span>✨</span></div>
+          <div class="ig-item" style="background: linear-gradient(135deg,#fff3cd,#ffd966)"><span>🌼</span></div>
+          <div class="ig-item" style="background: linear-gradient(135deg,#f5f5dc,#e8dfc8)"><span>🌿</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="logo footer-logo">avia<span>health</span></a>
+          <p class="footer-tagline">Pure, KKM certified products — created with care, inspired by a mother's devotion.
+          </p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Shop</h4>
+            <a href="#">Shop All</a>
+          </div>
+          <div class="footer-col">
+            <h4>Learn</h4>
+            <a href="#">Our Story</a>
+            <a href="#">FAQs</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Avia Health Sdn. Bhd.</p>
+        <div class="payment-icons">
+          <span class="payment-badge">Visa</span>
+          <span class="payment-badge">Mastercard</span>
+          <span class="payment-badge">FPX</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3 class="cart-title">Your Cart</h3>
+      <button class="cart-close" id="cartClose" aria-label="Close cart">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M18 6 6 18M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="cart-body" id="cartBody">
+      <div class="cart-empty" id="cartEmpty">
+        <span class="cart-empty-icon">🛍️</span>
+        <p>Your cart is empty</p>
+        <span>Add something wonderful!</span>
+      </div>
+      <div class="cart-items" id="cartItems"></div>
+    </div>
+
+    <div class="cart-footer" id="cartFooter" style="display:none;">
+      <div class="cart-summary">
+        <div class="cart-summary-row">
+          <span>Subtotal</span>
+          <span id="cartSubtotal">RM 0</span>
+        </div>
+        <div class="cart-summary-row">
+          <span>Shipping</span>
+          <span id="cartShipping">FREE</span>
+        </div>
+        <div class="cart-summary-divider"></div>
+        <div class="cart-summary-row total">
+          <span>Total</span>
+          <span id="cartTotal">RM 0</span>
+        </div>
+      </div>
+      <div class="cart-actions">
+        <button class="btn btn-ghost cart-continue" id="cartContinue">← Continue Shopping</button>
+        <a href="#" class="btn btn-primary cart-checkout">Checkout →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Overlay -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-container">
+      <div class="search-bar-wrap">
+        <svg class="search-icon-input" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"
+          viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="8" />
+          <path d="m21 21-4.35-4.35" />
+        </svg>
+        <input type="text" id="searchInput" class="search-input" placeholder="Search products..." autocomplete="off" />
+        <button class="search-clear" id="searchClear" aria-label="Clear search">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M18 6 6 18M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+    <div class="search-backdrop" id="searchBackdrop"></div>
+  </div>
+
+  <script>
+    // ── Sticky header ──
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // ── Burger / mobile menu ──
+    const burger = document.getElementById('burger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+
+    // ── Hero slider (index only) ──
+    if (document.querySelector('.hero-slide')) {
+      let currentSlide = 0;
+      const slides = document.querySelectorAll('.hero-slide');
+      const dots = document.querySelectorAll('.dot');
+      function goToSlide(n) {
+        slides[currentSlide].classList.remove('active');
+        dots[currentSlide].classList.remove('active');
+        currentSlide = (n + slides.length) % slides.length;
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+      }
+      document.getElementById('nextSlide').addEventListener('click', () => goToSlide(currentSlide + 1));
+      document.getElementById('prevSlide').addEventListener('click', () => goToSlide(currentSlide - 1));
+      dots.forEach((dot, i) => dot.addEventListener('click', () => goToSlide(i)));
+      setInterval(() => goToSlide(currentSlide + 1), 5000);
+    }
+
+    // ── AOS scroll animations ──
+    const aoEls = document.querySelectorAll('[data-aos]');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    aoEls.forEach(el => observer.observe(el));
+
+    // ── CART ──
+    let cart = JSON.parse(localStorage.getItem('aviaCart') || '[]');
+
+    const cartSidebar = document.getElementById('cartSidebar');
+    const cartOverlay = document.getElementById('cartOverlay');
+    const cartClose = document.getElementById('cartClose');
+    const cartContinue = document.getElementById('cartContinue');
+    const cartEmpty = document.getElementById('cartEmpty');
+    const cartItemsEl = document.getElementById('cartItems');
+    const cartFooter = document.getElementById('cartFooter');
+    const cartCountEl = document.querySelector('.cart-count');
+
+    function openCart() {
+      cartSidebar.classList.add('open');
+      cartOverlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeCart() {
+      cartSidebar.classList.remove('open');
+      cartOverlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    cartClose.addEventListener('click', closeCart);
+    cartOverlay.addEventListener('click', closeCart);
+    cartContinue.addEventListener('click', closeCart);
+
+    // Open cart when clicking the cart button in header
+    document.querySelector('.cart-btn').addEventListener('click', (e) => {
+      e.preventDefault();
+      openCart();
+    });
+
+    function saveCart() {
+      localStorage.setItem('aviaCart', JSON.stringify(cart));
+    }
+
+    function updateCartCount() {
+      const total = cart.reduce((sum, item) => sum + item.qty, 0);
+      cartCountEl.textContent = total;
+      cartCountEl.style.display = total > 0 ? 'flex' : 'flex';
+    }
+
+    function renderCart() {
+      const isEmpty = cart.length === 0;
+      cartEmpty.style.display = isEmpty ? 'flex' : 'none';
+      cartItemsEl.style.display = isEmpty ? 'none' : 'block';
+      cartFooter.style.display = isEmpty ? 'none' : 'block';
+
+      if (!isEmpty) {
+        cartItemsEl.innerHTML = cart.map((item, i) => `
+        <div class="cart-item">
+          <div class="cart-item-img" style="background:${item.img ? 'none' : item.bg}">${item.img ? '<img src="' + item.img + '" style="width:100%;height:100%;object-fit:cover;border-radius:12px;">' : '<span>' + (item.emoji || '🌿') + '</span>'}</div>
+          <div class="cart-item-info">
+            <p class="cart-item-name">${item.name}</p>
+            <p class="cart-item-cat">${item.cat}</p>
+            <div class="cart-item-controls">
+              <button class="qty-btn" onclick="changeQty(${i}, -1)">−</button>
+              <span class="qty-num">${item.qty}</span>
+              <button class="qty-btn" onclick="changeQty(${i}, 1)">+</button>
+              <button class="remove-btn" onclick="removeItem(${i})">Remove</button>
+            </div>
+          </div>
+          <p class="cart-item-price">RM ${(parseFloat(item.price) * item.qty).toFixed(2)}</p>
+        </div>
+      `).join('');
+
+        const subtotal = cart.reduce((sum, item) => sum + parseFloat(item.price) * item.qty, 0);
+        const shipping = subtotal >= 150 ? 'FREE' : 'RM 10';
+        const total = subtotal >= 150 ? subtotal : subtotal + 10;
+
+        document.getElementById('cartSubtotal').textContent = `RM ${subtotal.toFixed(2)}`;
+        document.getElementById('cartShipping').textContent = shipping;
+        document.getElementById('cartTotal').textContent = `RM ${total.toFixed(2)}`;
+      }
+
+      updateCartCount();
+      saveCart();
+    }
+
+    function changeQty(index, delta) {
+      cart[index].qty += delta;
+      if (cart[index].qty <= 0) cart.splice(index, 1);
+      renderCart();
+    }
+
+    function removeItem(index) {
+      cart.splice(index, 1);
+      renderCart();
+    }
+
+    function addToCart(name, cat, price, emoji, bg, quantity, img) {
+      const numPrice = parseFloat(price);
+      const numQty = parseInt(quantity) || 1;
+      const existing = cart.find(item => item.name === name);
+      if (existing) { existing.qty += numQty; }
+      else { cart.push({ name, cat, price: numPrice, emoji: emoji || '🌿', bg, img: img || '', qty: numQty }); }
+      renderCart();
+      openCart();
+    }
+
+    // Wire up all Add to Cart buttons
+    document.querySelectorAll('.btn-add').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const card = btn.closest('.product-card');
+        const name = card.querySelector('.product-card-name').textContent.trim();
+        const cat = card.querySelector('.product-card-cat').textContent.trim();
+        const price = parseFloat(card.querySelector('.product-card-price').textContent.replace('RM ', ''));
+        const emojiEl = card.querySelector('.product-card-emoji');
+        const emoji = emojiEl ? emojiEl.textContent : '🌿';
+        const imgEl = card.querySelector('.product-card-img, .product-card-coconut');
+        const bg = imgEl ? imgEl.style.background : 'linear-gradient(135deg, #d4edda, #a8d5b5)';
+        const productImg = card.querySelector('.product-card-coconut img');
+        const img = productImg ? productImg.getAttribute('src') : '';
+
+        // Button feedback
+        btn.textContent = '✓ Added!';
+        btn.style.background = 'var(--sage-dark)';
+        btn.style.color = 'white';
+        setTimeout(() => {
+          btn.textContent = 'Add to Cart +';
+          btn.style.background = '';
+          btn.style.color = '';
+        }, 1500);
+
+        addToCart(name, cat, price, emoji, bg, 1, img);
+      });
+    });
+
+    // Init
+    renderCart();
+
+    // ── SEARCH ──
+    const allProducts = [
+      { name: 'Organic Coconut Oil (Odourless)', cat: 'Daily Oil', price: 35, emoji: '🥥', img: 'image/1_Coconut Oil.png', bg: 'linear-gradient(135deg, #d4edda, #a8d5b5)', badge: 'NEW' },
+      { name: 'Virgin Coconut Oil', cat: 'Super Product', price: 45, emoji: '🌸', img: 'image/1_Virgin Oil.png', bg: 'linear-gradient(135deg, #fce4d6, #f7b89a)', badge: 'Bestseller' },
+      { name: 'Virgin Coconut Oil Softgel', cat: 'Supplement', price: 49.90, emoji: '⚡', img: 'image/1_Coconut Softgel.png', bg: 'linear-gradient(135deg, #e8d5f5, #c9a0dc)', badge: '' },
+      { name: 'Baby Organic Coconut Oil (Odourless)', cat: 'Baby Safe', price: 35, emoji: '💧', img: 'image/1_Baby Oil.png', bg: 'linear-gradient(135deg, #d6eefc, #90caf9)', badge: '' },
+      { name: 'La Flor (The Flower) Organic Coconut Oil', cat: 'Infused', price: 59.90, emoji: '🌼', img: 'image/1_Flower Oil.png', bg: 'linear-gradient(135deg, #fff3cd, #ffd966)', badge: '' },
+      { name: 'Organic Virgin Coconut Oil with Peppermint', cat: 'Refreshing', price: 39.90, emoji: '🍓', img: 'image/1_Peppermint Oil.png', bg: 'linear-gradient(135deg, #fde8ef, #f48fb1)', badge: '' },
+    ];
+
+    const searchOverlay = document.getElementById('searchOverlay');
+    const searchBackdrop = document.getElementById('searchBackdrop');
+    const searchInput = document.getElementById('searchInput');
+    const searchClear = document.getElementById('searchClear');
+    const searchResults = document.getElementById('searchResults');
+
+    function openSearch() {
+      searchOverlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => searchInput.focus(), 100);
+    }
+
+    function closeSearch() {
+      searchOverlay.classList.remove('open');
+      document.body.style.overflow = '';
+      searchInput.value = '';
+      searchResults.innerHTML = '';
+    }
+
+    document.querySelector('.nav-icon[aria-label="Search"]').addEventListener('click', (e) => {
+      e.preventDefault();
+      openSearch();
+    });
+
+    searchBackdrop.addEventListener('click', closeSearch);
+    searchClear.addEventListener('click', closeSearch);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeSearch();
+    });
+
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.trim().toLowerCase();
+
+      if (!query) {
+        searchResults.innerHTML = `
+      <p class="search-hint">Try searching "coconut", "skin", "hydration"...</p>
+    `;
+        return;
+      }
+
+      const matches = allProducts.filter(p =>
+        p.name.toLowerCase().includes(query) ||
+        p.cat.toLowerCase().includes(query)
+      );
+
+      if (matches.length === 0) {
+        searchResults.innerHTML = `
+      <div class="search-empty">
+        <p class="search-empty-icon">🔍</p>
+        <p>No products found for "<strong>${query}</strong>"</p>
+        <a href="products.html" class="search-view-all">Browse all products →</a>
+      </div>
+    `;
+        return;
+      }
+
+      let html = '<p class="search-results-label">' + matches.length + ' product' + (matches.length > 1 ? 's' : '') + ' found</p><div class="search-results-grid">';
+
+      matches.forEach(function (p) {
+        const imgHtml = p.img
+          ? '<img src="' + p.img + '" alt="' + p.name + '" style="width:100%;height:100%;object-fit:cover;border-radius:10px;">'
+          : '<span>' + (p.emoji || '🌿') + '</span>';
+        const badgeHtml = p.badge ? '<span class="search-result-badge">' + p.badge + '</span>' : '';
+        const bgStyle = p.img ? 'none' : p.bg;
+
+        html += '<div class="search-result-card" onclick="addToCartFromSearch(\'' + p.name + '\', \'' + p.cat + '\', ' + p.price + ', \'' + (p.emoji || '🌿') + '\', \'' + p.bg + '\', \'' + (p.img || '') + '\')">';
+        html += '<div class="search-result-img" style="background:' + bgStyle + '">' + imgHtml + badgeHtml + '</div>';
+        html += '<div class="search-result-info">';
+        html += '<p class="search-result-cat">' + p.cat + '</p>';
+        html += '<p class="search-result-name">' + p.name + '</p>';
+        html += '<p class="search-result-price">RM ' + (Number.isInteger(parseFloat(p.price)) ? p.price : parseFloat(p.price).toFixed(2)) + '</p>';
+        html += '</div>';
+        html += '<button class="search-add-btn">Add +</button>';
+        html += '</div>';
+      });
+
+      html += '</div><a href="products.html" class="search-view-all">View all products →</a>';
+      searchResults.innerHTML = html;
+    });
+
+    function addToCartFromSearch(name, cat, price, emoji, bg, img) {
+      addToCart(name, cat, price, emoji, bg, 1, img);
+      closeSearch();
+    }
+  </script>
+
+</body>
+
+</html>
