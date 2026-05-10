@@ -2432,13 +2432,15 @@ img {
 
   .hero-product-img {
     width: 100% !important;
-    height: 240px !important;
-    object-fit: cover !important;
-    object-position: center top !important;
+    height: auto !important;
+    max-height: 300px !important;
+    object-fit: contain !important;
+    object-position: center !important;
     display: block !important;
     border-radius: 20px !important;
     padding: 0 !important;
     margin: 0 !important;
+    background: transparent !important;
   }
 
   /* Text SECOND on mobile */
@@ -2792,6 +2794,17 @@ img {
 
   .trust-icon {
     font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .announcement-bar {
+    font-size: 10px !important;
+    padding: 5px 0 !important;
+  }
+
+  .announcement-track span {
+    font-size: 10px !important;
   }
 }
 
