@@ -63,11 +63,11 @@ img {
 .announcement-bar {
   background: var(--sage-dark);
   color: var(--white);
-  font-size: 0.78rem;
+  font-size: 12px;
   font-weight: 500;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
   overflow: hidden;
-  padding: 9px 0;
+  padding: 8px 0;
   width: 100%;
 }
 
@@ -1297,6 +1297,11 @@ img {
   .products-section {
     padding: 32px 0 60px;
   }
+
+  .hero-cta-group .btn {
+    padding: 9px 20px;
+    font-size: 0.82rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -2362,6 +2367,7 @@ img {
     min-height: auto;
     padding: 0 0 40px;
     overflow: visible;
+    position: relative;
   }
 
   .hero-slides {
@@ -2415,9 +2421,11 @@ img {
   .hero-product-img {
     width: 100%;
     height: 220px;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: center;
     border-radius: 24px;
     display: block;
+    background: transparent;
   }
 
   .hero-text {
@@ -2441,13 +2449,13 @@ img {
   }
 
   .hero-dots {
-    position: relative;
-    bottom: auto;
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
     left: auto;
     transform: none;
-    justify-content: center;
-    margin-top: 20px;
     display: flex;
+    z-index: 10;
   }
 
   .hero-arrow {
@@ -2460,11 +2468,25 @@ img {
   }
 
   .trust-item {
-    font-size: 0.72rem;
-    padding: 4px 8px;
+    font-size: 0.7rem;
+    padding: 4px 6px;
+    flex-shrink: 0;
   }
 
   .trust-divider {
+    display: none;
+  }
+
+  .trust-items {
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 8px;
+  }
+
+  .trust-items::-webkit-scrollbar {
     display: none;
   }
 
@@ -2680,6 +2702,15 @@ img {
   .page-hero-title {
     font-size: clamp(1.8rem, 7vw, 2.8rem);
   }
+
+  .announcement-bar {
+    font-size: 11px;
+    padding: 7px 0;
+  }
+
+  .announcement-track {
+    animation-duration: 20s;
+  }
 }
 
 /* Extra small phones */
@@ -2755,10 +2786,24 @@ img {
   }
 
   .products-section .products-grid .product-card {
-    flex: 0 0 75vw;
-    max-width: 300px;
+    flex: 0 0 72vw;
+    max-width: 280px;
     scroll-snap-align: start;
     opacity: 1;
     transform: none;
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .products-section .products-grid .product-card-coconut,
+  .products-section .products-grid .product-card-img {
+    height: 200px;
+    border-radius: var(--radius) var(--radius) 0 0;
+  }
+
+  .products-section .products-grid .product-card-coconut img {
+    object-fit: contain;
+    padding: 10px;
+    background: #fff;
   }
 }
