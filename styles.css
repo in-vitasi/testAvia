@@ -2362,161 +2362,191 @@ img {
   }
 
   /* Hero */
+  /* ── MOBILE HERO COMPLETE REWRITE ── */
   .hero-section {
     position: relative;
-    height: auto;
-    min-height: auto;
-    padding: 0 0 48px;
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    padding: 0 !important;
     overflow: hidden;
   }
 
   .hero-slides {
-    height: auto;
+    height: auto !important;
   }
 
   .hero-slide {
-    position: relative;
-    inset: auto;
-    opacity: 1;
-    pointer-events: all;
-    display: none;
-    flex-direction: column;
+    position: relative !important;
+    inset: auto !important;
+    opacity: 0;
+    pointer-events: none;
+    display: none !important;
+    flex-direction: column !important;
   }
 
   .hero-slide.active {
-    display: flex;
+    display: flex !important;
+    opacity: 1;
+    pointer-events: all;
   }
 
   .hero-bg {
-    position: absolute;
-    inset: 0;
-    display: block;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0;
   }
 
   .hero-content {
     position: relative;
     z-index: 2;
-    grid-template-columns: 1fr;
-    padding: 0;
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: unset !important;
+    padding: 0 !important;
+    gap: 0 !important;
     text-align: center;
-    gap: 0;
-    display: flex;
-    flex-direction: column;
   }
 
+  /* Image FIRST on mobile */
   .hero-visual {
-    display: flex;
-    justify-content: center;
+    display: flex !important;
+    order: 1;
     width: 100%;
-    padding: 24px 24px 0;
+    justify-content: center;
+    padding: 20px 20px 0;
   }
 
   .product-card-hero {
-    width: 100%;
-    max-width: 100%;
-    border-radius: 20px;
-    animation: floatHero 4s ease-in-out infinite;
-    overflow: hidden;
-    box-shadow: var(--shadow-lg);
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    animation: floatHero 4s ease-in-out infinite !important;
+    box-shadow: var(--shadow-lg) !important;
     background: transparent !important;
     padding: 0 !important;
+    display: block !important;
   }
 
   .hero-product-img {
-    width: 100%;
-    height: auto;
-    max-height: 260px;
-    object-fit: contain;
-    object-position: center;
-    border-radius: 20px;
-    display: block;
-    padding: 0;
-    background: transparent;
+    width: 100% !important;
+    height: 240px !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+    display: block !important;
+    border-radius: 20px !important;
+    padding: 0 !important;
+    margin: 0 !important;
   }
 
+  /* Text SECOND on mobile */
   .hero-text {
-    padding: 20px 24px 0;
+    order: 2;
+    padding: 20px 20px 24px !important;
     position: relative;
     z-index: 2;
   }
 
-  .hero-title {
-    font-size: clamp(1.6rem, 7vw, 2.4rem);
+  .hero-eyebrow {
     margin-bottom: 10px;
-    line-height: 1.1;
+  }
+
+  .hero-title {
+    font-size: clamp(1.5rem, 7vw, 2.2rem) !important;
+    margin-bottom: 10px !important;
+    line-height: 1.15 !important;
   }
 
   .hero-desc {
-    font-size: 0.86rem;
-    margin-bottom: 16px;
-    max-width: 100%;
+    font-size: 0.85rem !important;
+    margin-bottom: 16px !important;
+    max-width: 100% !important;
   }
 
   .hero-cta-group {
-    justify-content: center;
-    gap: 10px;
+    justify-content: center !important;
+    gap: 8px !important;
   }
 
   .hero-cta-group .btn {
-    padding: 9px 20px;
-    font-size: 0.82rem;
+    padding: 8px 18px !important;
+    font-size: 0.8rem !important;
   }
 
+  /* Dots inside hero, bottom right */
   .hero-dots {
-    position: absolute;
-    bottom: 12px;
-    right: 16px;
-    left: auto;
-    transform: none;
-    display: flex;
-    z-index: 10;
+    position: absolute !important;
+    bottom: 10px !important;
+    right: 14px !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+    z-index: 10 !important;
+    display: flex !important;
   }
 
   .hero-arrow {
-    display: none;
+    display: none !important;
   }
 
   /* Trust bar */
+  /* ── MOBILE TRUST BAR COMPLETE REWRITE ── */
   .trust-bar {
-    padding: 10px 0;
-    overflow: hidden;
+    padding: 8px 0 !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    white-space: nowrap !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+  }
+
+  .trust-bar::-webkit-scrollbar {
+    display: none !important;
   }
 
   .trust-items {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 0;
-    padding: 0 12px;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .trust-items::-webkit-scrollbar {
-    display: none;
+    display: inline-flex !important;
+    flex-wrap: nowrap !important;
+    white-space: nowrap !important;
+    align-items: center !important;
+    padding: 0 12px !important;
+    gap: 0 !important;
+    width: max-content !important;
+    min-width: 100% !important;
   }
 
   .trust-item {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 11px;
-    font-weight: 500;
-    color: var(--text-mid);
-    padding: 4px 10px;
-    white-space: nowrap;
-    flex-shrink: 0;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+    padding: 0 10px !important;
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    color: var(--text-mid) !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
   }
 
   .trust-icon {
-    font-size: 14px;
-    flex-shrink: 0;
+    font-size: 13px !important;
+    flex-shrink: 0 !important;
+    line-height: 1 !important;
+  }
+
+  .trust-item span:last-child {
+    display: inline !important;
+    font-size: 11px !important;
+    white-space: nowrap !important;
   }
 
   .trust-divider {
-    display: none;
+    width: 1px !important;
+    height: 16px !important;
+    background: var(--sand) !important;
+    display: inline-block !important;
+    flex-shrink: 0 !important;
   }
 
   /* Welcome */
